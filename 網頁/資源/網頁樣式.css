@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: blue;
+}
+
+.左板 {
+    position: fixed;
+    height: 100%;
+    width: 18vw;
+    
+    padding: 1vw;
+    padding-top: 2.5vw;
+    background-image: url('紙背景花紋模糊.jpg');
+    background-color: #dec6a1;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    left: 0vw;
+    background-position: 0vw 0vw;
+    
+    box-shadow: 0px 0px 1vw rgba(0, 0, 0, 0.5);
+    
+    transition: left 0.5s, width 0.5s, background-position 0.5s;
+}
+
+.左板.位置調整 {
+    left: -20vw;
+    background-position: 0.001vw 0vw; /* chrome的bug導致背景不動，用這個修理 */
+}
+
+.右板 {
+    position: absolute;
+    left: 20vw;
+    top: 0vw;
+    width: 74vw;
+    padding: 2vw;
+    transition: left 0.5s;
+}
+
+.右板.位置調整 {
+    left: 13vw;
+}
+
+.鎖 {
+    z-index: 10;
+    position: fixed;
+    top: 1vw;
+    left: 1vw;
+    padding: 0.5vw;
+    transition: box-shadow 0.2s;
+}
+
+.按鈕 {
+    background: url('紙背景花紋模糊.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    border-radius: 0.5vw;
+    display: inline-block;
+    box-shadow: 0px 0px 0.8vw rgba(0, 0, 0, 0.6);
+    transition: box-shadow 0.2s;
+}
+
+.按鈕:hover {
+    box-shadow: 0px 0px 0.4vw rgba(0, 0, 0, 0.6);
+}
+
+.終焉 {
+    padding: 2vw;
+}
+
+.終焉>a {
+    color: #000;
+    padding: 0px 1.6vw;
+    font-size: 125%;
+}
+
+.終焉>.前 {
+    float: left;
+}
+
+.終焉>.後 {
+    float: right;
+}
